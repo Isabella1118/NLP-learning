@@ -1,0 +1,77 @@
+
+# coding: utf-8
+
+# In[28]:
+
+
+import tensorflow as tf
+import numpy as np
+
+print(tf.__version__) #two "_" not one
+
+
+# In[29]:
+
+
+from tensorflow.contrib.learn.python.learn.datasets import base
+
+# import dataset files
+IRIS_TRAINING = r"C:\Users\Administrator\Desktop\Tensorflow\iris_test.csv.csv"
+IRIS_TEST = r"C:\Users\Administrator\Desktop\Tensorflow\iris_training.csv.csv"
+
+# load dataset
+training_set = base.load_csv_with_header(filename = IRIS_TRAINING, 
+                                         features_dtype = np.float32,
+                                         target_dtype = np.int)
+test_set = base.load_csv_with_header(filename = IRIS_TEST, 
+                                         features_dtype = np.float32,
+                                         target_dtype = np.int)
+print(training_set.data)
+print(training_set.target) # 1st list is for 4 features while the 2nd one is for target results
+
+
+# In[30]:
+
+
+# create a model
+# assume every feature has a real value for its data
+
+feature_name = "iris_features"
+feature_columns = [tf.feature_column.numeric_column(feature_name, shape=[4])]
+classifier = tf.estimator.LinearClassifier(feature_columns = feature_columns,
+                                               n_classes = 3,
+                                               model_dir = "/tmp/iris_model")
+
+
+# In[31]:
+
+
+# define input function to create data for the model
+def input_fn(dataset):
+    def _fn():
+        features = {feature_name: tf.constant(dataset.data)}
+        label = tf.constant(dataset.target)
+        return features, label
+    return _fn
+
+print(input_fn(training_set)())
+
+
+# In[32]:
+
+
+# data flow
+# raw data, input_fn, feature_columns, model
+# fit model, train model
+classifier.train(input_fn = input_fn(training_set), steps = 1000)
+print('fit already done')
+
+
+# In[33]:
+
+
+# evaluate accuracy of the model
+accuracy_score = classifier.evaluate(input_fn = input_fn(test_set),
+                                     steps = 100)["accuracy"]
+print('\nAccuracy: {0:f}'.format(accuracy_score))
+
