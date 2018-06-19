@@ -16,8 +16,8 @@ print(tf.__version__) #two "_" not one
 from tensorflow.contrib.learn.python.learn.datasets import base
 
 # import dataset files
-IRIS_TRAINING = r"C:\Users\Administrator\Desktop\Tensorflow\iris_test.csv.csv"
-IRIS_TEST = r"C:\Users\Administrator\Desktop\Tensorflow\iris_training.csv.csv"
+IRIS_TRAINING = r"C:\Users\Administrator\Desktop\Tensorflow\iris_training.csv.csv"
+IRIS_TEST = r"C:\Users\Administrator\Desktop\Tensorflow\iris_test.csv.csv"
 
 # load dataset
 training_set = base.load_csv_with_header(filename = IRIS_TRAINING, 
