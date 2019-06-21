@@ -67,8 +67,7 @@ theta_i and e_j should be initialized to 0 at the beginning of training.
 (Correct) X_{ij} is the number of times word i appears in the context of word j.
 (Correct) The weighting function f(.)f(.) must satisfy f(0) = 0f(0)=0.
 
-10.
-You have trained word embeddings using a text dataset of m_1 words. You are considering using these word embeddings for a language task, 
+10. You have trained word embeddings using a text dataset of m_1 words. You are considering using these word embeddings for a language task, 
 for which you have a separate labeled dataset of m_2 words. Keeping in mind that using word embeddings is a form of transfer learning, 
 under which of these circumstance would you expect the word embeddings to be helpful?
 
