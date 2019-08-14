@@ -1,0 +1,857 @@
+message = "Hello Python world!"
+print(message)
+
+message = "Hello Python Crash Course world"
+print(message)
+
+name = "ada lovelace"
+print(name.title())
+print(name.upper())
+print(name.lower())
+
+first_name = "ada"
+last_name = "lovelace"
+full_name = first_name + " " + last_name
+
+message = "Hello, " + full_name.title() + "!" 
+print(message)
+
+print("\tHello world")
+print("Hello \tworld")
+
+print("Languages:\nPython\nC\nJava")
+print("Languages:\n\tPython\n\tC\n\tJava")
+
+favorite_language = "python "
+favorite_language = favorite_language.rstrip()
+print(favorite_language)
+
+age = 23
+message = "Happy " + str(age) + "rd Birthday!"
+print(message)
+
+bicycles = ['trek', 'canondale', 'redline', 'specialized']
+print(bicycles)
+print(bicycles[0])
+print(bicycles[-1])
+
+motorcycles = ['honda', 'yamaha', 'suzuki']
+print(motorcycles)
+
+motorcycles.append('ducati')
+print(motorcycles)
+
+motorcycles = []
+motorcycles.append('honda')
+motorcycles.append('yamaha')
+motorcycles.append('suzuki')
+print(motorcycles)
+
+motorcycles.insert(0, 'ducati')
+print(motorcycles)
+
+motorcycles = ['honda', 'yamaha', 'suzuki']
+del motorcycles[0]
+print(motorcycles)
+
+popped_motorcycle = motorcycles.pop()
+print(motorcycles)
+print(popped_motorcycle)
+
+motorcycles = ['honda', 'yamaha', 'suzuki']
+first_owned = motorcycles.pop(0)
+print(first_owned.title())
+print(motorcycles)
+
+motorcycles = ['honda', 'yamaha', 'suzuki']
+motorcycles.remove('suzuki')
+
+motorcycles = ['honda', 'yamaha', 'suzuki', 'ducati']
+too_expensive = 'ducati'
+motorcycles.remove(too_expensive)
+print(motorcycles)
+
+cars = ['bmw', 'audi', 'toyota', 'subaru']
+cars.sort()
+print(cars)
+
+cars.sort(reverse=True)
+print(cars)
+
+cars = ['bmw', 'audi', 'toyota', 'subaru']
+print(sorted(cars))
+print(cars)
+
+cars = ['bmw', 'audi', 'toyota', 'subaru']
+cars.reverse()
+print(cars)
+cars.reverse()
+print(cars)
+
+magicians = ['alice', 'david', 'carolina']
+for magician in magicians:
+	print(magician)
+
+for value in range(1,5):
+	print(value)
+
+numbers = list(range(1,6))
+print(numbers)
+
+even_numbers = list(range(2,11,2))
+print(even_numbers)
+
+squares = []
+for value in range(1,11):
+	square = value**2
+	squares.append(square)
+print(squares)
+
+squares = [value**2 for value in range(1,11)]
+print(squares)
+
+players = ['charles', 'martina', 'michael', 'florence', 'eli']
+print(players[:4])
+
+print(players[2:])
+
+print(players[-3:])
+
+my_foods = ['hotpot', 'milk tea', 'burger']
+his_foods = my_foods[:]
+print(his_foods)
+
+
+dimensions = (200,50)
+for dimension in dimensions:
+	print(dimension)
+
+
+cars = ['audi', 'bmw', 'subaru', 'toyota']
+
+for car in cars:
+	if car == 'bmw':
+		print(car.upper())
+	else:
+		print(car.title())
+
+banned_users = ['andrew', 'carolina', 'david']
+user = 'marie'
+
+if user not in banned_users:
+	print(user.title() + ' can post a response if you wish')
+
+age = 17
+if age >= 18:
+	print('You are old enough to vote!')
+	print('Have you registered to vote yet?')
+else:
+	print('Sorry you are too young to vote!')
+	print('Please register to vote as soon as you turn 18!')
+
+age = 12
+
+if age < 4:
+	price = 0
+elif age < 18:
+	price = 5
+else:
+	price = 10
+
+print('Your admission cost is $' + str(price) + '.')
+
+requested_toppings = ['mushrooms', 'extra cheese']
+if 'mushrooms' in requested_toppings:
+	print('Adding mushrooms')
+if 'pepperoni' in requested_toppings:
+	print('Adding pepperoni')
+if 'extra cheese' in requested_toppings:
+	print('Adding extra cheese')
+
+requested_toppings = ['mushrooms', 'green pepers', 'extra cheese']
+for requested_topping in requested_toppings:
+	print('Adding ' + requested_topping + '.')
+
+print('\nFinished making your pizza!')
+
+requested_toppings = ['mushrooms', 'green pepers', 'extra cheese']
+for requested_topping in requested_toppings:
+	if requested_topping == 'green pepers':
+		print('Sorry we are out of green peppers right now.')
+	else:
+		print('Adding ' + requested_topping + '.')
+
+requested_toppings = []
+
+if requested_toppings:
+	for requested_topping in requested_toppings:
+		print('Adding ' + requested_topping + '.')
+		print('\nFinished making your pizza!')
+else:
+	print('Are you sure you want a plain pizza?')
+
+available_toppings = ['mushrooms', 'olives', 'green peppers', 'pepperoni', 'pineapple', 'extra cheese']
+requested_toppings = ['mushrooms', 'french fries', 'extra cheese']
+
+for requested_topping in requested_toppings:
+	if requested_topping in available_toppings:
+		print("Adding" + requested_topping)
+	else:
+		print("Sorry we don't have " + requested_topping + ".")
+
+alien_0 = {'color':'green', 'points':5}
+print(alien_0['color'])
+print(alien_0['points'])
+
+alien_0['x_position'] = 0
+alien_0['y_position'] = 25
+print(alien_0)
+
+alien_0 = {}
+alien_0['color'] = 'green'
+alien_0['points'] = 5
+print(alien_0)
+
+alien_0 = {'x_position': 0, 'y_position': 25, 'speed': 'medium'}
+if alien_0['speed'] == 'slow':
+	x_increment = 1
+elif alien_0['speed'] == 'medium':
+	x_increment = 2
+else:
+	x_increment = 3
+
+alien_0['x_position'] = alien_0['x_position'] + x_increment
+print('New x-position: ' + str(alien_0['x_position']))
+
+alien_0 = {'color':'green', 'points':5}
+del alien_0['points']
+print(alien_0)
+
+favorite_languages = {
+	'jen': 'python',
+	'sarah': 'c',
+	'edward': 'ruby',
+	'phil': 'python',
+}
+print("Sarah's favoriate language is " +
+	favorite_languages['sarah'].title() + '.')
+
+user_0 = {
+	'username': 'efermi',
+	'first': 'enrico',
+	'last': 'fermi',
+	}
+
+for key, value in user_0.items():
+	print('\nkey: ' + key)
+	print('value: ' + value)
+
+favorite_languages = {
+	'jen': 'python',
+	'sarah': 'c',
+	'edward': 'ruby',
+	'phil': 'python',
+}
+for name, language in favorite_languages.items():
+	print(name.title() + "'s favorite language is " +
+		language.title() + ".")
+
+for name in favorite_languages.keys():
+	print(name.title())
+
+friends = ['phil', 'sarah']
+for name in favorite_languages.keys():
+	print(name.title())
+
+	if name in friends:
+		print(" Hi " + name.title() +
+		", I see your favorite language is " +
+		favorite_languages[name].title() + '.')
+
+if 'erin' not in favorite_languages.keys():
+	print('Erin, please take our poll!')
+
+for name in sorted(favorite_languages.keys()):
+	print(name.title() + ", thank you for taking the poll.")
+
+for language in set(favorite_languages.values()):
+	print(language.title())
+
+alien_0 = {'color': 'green', 'points': 5}
+alien_1 = {'color': 'yellow', 'points': 10}
+alien_2 = {'color': 'red', 'points': 15}
+
+aliens = [alien_0, alien_1, alien_2]
+for alien in aliens:
+	print(alien)
+
+aliens = []
+for alien_num in range(30):
+	new_alien = {'color': 'green', 'points': 5, 'speed': 'slow'}
+	aliens.append(new_alien)
+
+for alien in aliens[:3]:
+	if alien['color'] == 'green':
+		alien['color'] = 'yellow'
+		alien['points'] = 10
+		alien['speed'] = 'medium'
+
+for alien in aliens[:5]:
+	print(alien)
+print('...')
+
+print('Total number of aliens: ' + str(len(aliens)))
+
+pizza = {
+	'crust': 'thick',
+	'toppings': ['mushrooms', 'extra cheese'],
+}
+print('You ordered a ' + pizza['crust'] + '-crust pizza ' +
+	'with the following toppings: ')
+
+for topping in pizza['toppings']:
+	print('\t' + topping)
+
+favorite_languages = {
+	'jen': ['python', 'ruby'],
+	'sarah': ['c'],
+	'edward': ['ruby', 'go'],
+	'phil': ['python', 'haskell'],
+	}
+
+for name, languages in favorite_languages.items():
+	print('\n' + name.title() + "'s favorite languages are:")
+	for language in languages:
+		print('\t' + language.title())
+
+users = {
+	'aeinstein':{
+	'first': 'albert',
+	'last': 'einstein',
+	'location': 'princeton',
+	},
+	'mcurie':{
+	'first': 'marie',
+	'last': 'curie',
+	'location': 'paris',
+	},
+}
+
+for username, user_info in users.items():
+	print('\nUsername: ' + username)
+	full_name = user_info['first'] + user_info['last']
+	location = user_info['location']
+
+	print('\tFull name: ' + full_name.title())
+	print('\tLocation: ' + location.title())
+
+#message = input("Tell me sth and I will repeat it back to you: ")
+#print(message)
+
+#prompt = '\nTell me sth and I will repeat it back to you: '
+#prompt += "\nEnter 'quit' to end the program"
+
+#active = True
+#while active:
+	#message = input(prompt)
+
+	#if message == 'quit':
+		#active = false 
+	#else:
+		#print(message)
+
+current_number = 0
+while current_number < 10:
+	current_number += 1
+	if current_number %2 == 0:
+		continue
+
+	print(current_number)
+
+unconfirmed_users = ['alice', 'brian', 'candace']
+confirmed_users = []
+
+while unconfirmed_users:
+	current_user = unconfirmed_users.pop()
+
+	print('Verifying user: ' + current_user.title())
+	confirmed_users.append(current_user)
+
+
+print("\nThe following users have been confirmed:")
+for confirmed_user in confirmed_users:
+	print(confirmed_user.title())
+
+pets = ['dog', 'cat', 'dog', 'goldfish', 'cat', 'rabbit', 'cat']
+print(pets)
+
+while 'cat' in pets:
+	pets.remove('cat')
+
+print(pets)
+
+responses = {}
+
+polling_active = True
+
+#while polling_active:
+	#name = input("\nWhat is your name? ")
+	#response = input("Which mountain would you like to climb someday?")
+
+	#responses[name] = response
+
+	#repeat = input("Would you like to let another person respond? (yes/no) ")
+	#if repeat == 'no':
+		#polling_active = False 
+
+#print("\n--- Rolling Results ---")
+#for name, response in responses.items():
+	#print('name + "would like to climb " + response + "."')
+
+def greet_user():
+	"""show simple greetings"""
+	print("Hello!")
+
+greet_user()
+
+def greet_user(username):
+	"""show simple greetings"""
+	print("Hello, " + username.title() + "!")
+
+greet_user("Jessica")
+
+def describe_pet(animal_type, pet_name):
+	"""show the information of a pet"""
+	print("\nI have a " + animal_type + ".")
+	print("My " + animal_type + "'s name is " + pet_name.title() + ".")
+
+describe_pet("dog", "Peter")
+
+def describe_pet(animal_type, pet_name):
+	"""show the information of a pet"""
+	print("\nI have a " + animal_type + ".")
+	print("My " + animal_type + "'s name is " + pet_name.title() + ".")
+
+describe_pet(animal_type="dog", pet_name="Peter")
+
+def describe_pet(pet_name, animal_type="dog"):
+	"""show the information of a pet"""
+	print("\nI have a " + animal_type + ".")
+	print("My " + animal_type + "'s name is " + pet_name.title() + ".")
+
+describe_pet(pet_name="Peter")
+
+def get_formatted_name(first_name, last_name):
+	full_name = first_name + " " + last_name
+	return full_name.title()
+
+musician = get_formatted_name('jimi', 'hendrix')
+print(musician)
+
+def get_formatted_name(first_name, last_name, middle_name=''):
+	if middle_name:
+		full_name = first_name + ' ' + middle_name + ' ' + last_name
+	else:
+		full_name = first_name + ' ' + last_name
+	return full_name.title()
+
+musician = get_formatted_name('jimi', 'hendrix')
+print(musician)
+
+musician = get_formatted_name('john', 'hooker', 'lee')
+print(musician)
+
+def build_person(first_name, last_name):
+	person = {'first': first_name, 'last': last_name}
+	return person
+
+musician = build_person('jimi', 'hendrix')
+print(musician)
+
+def build_person(first_name, last_name, age=''):
+	person = {'first': first_name, 'last': last_name}
+	if age:
+		person['age'] = age
+	return person
+
+musician = build_person('jimi', 'hendrix', 27)
+print(musician)
+
+def get_formatted_name(first_name, last_name):
+	full_name = first_name + " " + last_name
+	return full_name
+
+#while True:
+	#print("\nPlease tell me your name:")
+	#print("(enter 'q' at any time to quit)")
+
+	#f_name = input("Fist name: ")
+	#if f_name == 'q':
+		#break
+
+	#l_name = input("Last name: ")
+	#if l_name =='q':
+		#break
+
+	#formatted_name = get_formatted_name(f_name, l_name)
+	#print(formatted_name)
+
+def greet_users(names):
+	for name in names:
+		msg = "Hello, " + name.title() + "!"
+		print(msg)
+
+usernames = ['hannah', 'ty', 'margot']
+greet_users(usernames)
+
+unprinted_designs = ['iphone case', 'robot pendant', 'dodecahedron']
+completed_models = []
+
+while unprinted_designs:
+	current_design = unprinted_designs.pop()
+
+	print("Printing model: " + current_design)
+	completed_models.append(current_design)
+
+print("\nThe following models have been printed: ")
+for completed_model in completed_models:
+	print(completed_model)
+
+def print_models(unprinted_designs, completed_models):
+	while unprinted_designs:
+		current_design = unprinted_designs.pop()
+
+		print("Printing model: " + current_design)
+		completed_models.append(current_design)
+
+def show_completed_models(completed_models):
+	print("\nThe following models have been printed: ")
+	for completed_model in completed_models:
+		print(completed_model)
+print_models(unprinted_designs, completed_models)
+show_completed_models(completed_models)
+
+unprinted_designs = ['iphone case', 'robot pendant', 'dodecahedron']
+completed_models = []
+
+def make_pizza(*toppings):
+	print("\nMaking a pizza with the following toppings:")
+	for topping in toppings:
+		print("- " + topping)
+
+make_pizza("pepperoni")
+make_pizza("mushrooms", "green pepers", "extra cheese")
+
+def make_pizza(size, *toppings):
+	print("\nMaking a " + str(size) +
+		"-inch pizza with the following toppings:")
+	for topping in toppings:
+		print(topping)
+
+make_pizza(16, "pepperoni")
+make_pizza(18, "mushrooms", "green pepers", "extra cheese")
+
+def build_profile(first, last, **user_info):
+	profile = {}
+	profile['first_name'] = first
+	profile['last_name'] = last
+	for key, value in user_info.items():
+		profile[key] = value
+	return profile
+
+user_profile = build_profile('albert', 'einstein', location='princeton', field='physics')
+print(user_profile)
+
+
+class Dog():
+	def __init__(self, name, age):
+		self.name = name
+		self.age = age
+
+	def sit(self):
+		print(self.name.title() + " is now sitting.")
+
+	def roll_over(self):
+		print(self.name.title() + " rolled over.")
+
+my_dog = Dog("willie", 6)
+print("My dog's name is " + my_dog.name.title() + ".")
+print("My dog is " + str(age) + " years old.")
+
+my_dog.sit()
+my_dog.roll_over()
+
+class Car():
+	def __init__(self, make, model, year):
+		self.make = make
+		self.model = model
+		self.year = year
+		self.odometer_reading = 0
+
+	def get_descriptive_name(self):
+		long_name = str(self.year) + " " + self.make + " " + self.model
+		return long_name.title()
+
+	def read_odometers(self):
+		print("This car has " + str(self.odometer_reading) + " miles on it.")
+
+	def update_odometer(self, mileage):
+		if mileage >= self.odometer_reading:
+			self.odometer_reading = mileage
+		else:
+			print("You can't roll back an odometer!")
+
+	def increment_odometer(self, miles):
+		self.odometer_reading += miles
+
+my_used_car = Car('subaru', 'outback', 2016)
+print(my_used_car.get_descriptive_name())
+
+#my_new_car.odometer_reading = 23
+
+my_used_car.update_odometer(23500)
+my_used_car.increment_odometer(100)
+my_used_car.read_odometers()
+
+class Battery():
+	def __init__(self, battery_size=70):
+		self.battery_size = battery_size
+
+	def describe_battery(self):
+		print("This car has a " + str(self.battery_size) + "-kwh battery.")
+
+	def get_range(self):
+		if self.battery_size == 70:
+			range = 240
+		elif self.battery_size == 85:
+			range = 270
+
+		message = "This car can go approximately " + str(range) + " miles on a full charge."
+		print(message)
+
+class ElectricCar(Car):
+	def __init__(self, make, model, year):
+		super().__init__(make, model, year)
+		self.battery = Battery()
+
+my_tesla = ElectricCar('tesla', 'model s', 2016)
+print(my_tesla.get_descriptive_name())
+#my_tesla.describe_battery()
+my_tesla.battery.describe_battery()
+my_tesla.battery.get_range()
+
+from collections import OrderedDict
+
+favorite_languages = OrderedDict()
+favorite_languages['jen'] = 'python'
+favorite_languages['sarah'] = 'c'
+favorite_languages['edward'] = 'ruby'
+favorite_languages['phil'] = 'python'
+
+for name, language in favorite_languages.items():
+	print(name.title() + " 's favorite language is " + language.title() + ".")
+
+with open('pi_digits.txt') as file_object:
+	contents = file_object.read()
+	print(contents.rstrip())
+
+file_name = 'pi_digits.txt'
+with open(file_name) as file_object:
+	for line in file_object:
+		print(line.rstrip())
+
+file_name = 'pi_digits.txt'
+
+with open(file_name) as file_object:
+	lines = file_object.readlines()
+
+for line in lines:
+	print(line.rstrip())
+
+with open(file_name) as file_object:
+	lines = file_object.readlines()
+
+pi_string = ''
+for line in lines:
+	pi_string += line.strip()
+
+#birthday = input("Enter your birthday, in the form mmddyy: ")
+#if birthday in pi_string:
+	#print("Your birthday appears in the first million digits of pi!")
+#else:
+	#print("Your birthday does not appear in the first million digits of pi.")
+
+print(pi_string)
+print(len(pi_string))
+
+file_name = 'programming.txt'
+
+with open(file_name, 'w') as file_object:
+	file_object.write("I love programming.\n")
+	file_object.write("I love creating new games.\n")
+
+with open(file_name, 'a') as file_object:
+	file_object.write("I also love finding meaning in large datasets.\n")
+	file_object.write("I love creating apps that can run in a browser.\n")
+
+try:
+	print(5/0)
+except ZeroDivisionError:
+	print("You can't divide by zero!")
+
+print("Give me two numbers, and I'll divide them.")
+print("Enter q to quit.")
+
+#while True:
+	#first_number = input("\nFirst number: ")
+	#if first_number == 'q':
+		#break
+	#second_number = input("\nSecond number: ")
+	#try:
+		#answer = int(first_number) / int(second_number)
+	#except ZeroDivisionError:
+		#print("You can't divide by zero!")
+	#else:
+		#print(answer)
+
+filename = "alice.txt"
+
+try:
+	with open(filename) as f_object:
+		contents = f_object.read()
+except FileNotFoundError:
+	msg = "Sorry the file " + filename + " does not exist."
+	print(msg)
+
+title = 'alice in wonderland'
+print(title.split())
+
+filename = 'alice.txt'
+
+try:
+	with open(filename) as f_obj:
+		contents = f_obj.read()
+except FileNotFoundError:
+	msg = "Sorry the file " + filename + " does not exist."
+	print(msg)
+else:
+	words = contents.split()
+	num_words = len(words)
+	print("The file " + filename + " has about " + str(num_words) + " words.")
+
+def count_words(filename):
+	try:
+		with open(filename) as f_obj:
+			contents = f_obj.read()
+	except FileNotFoundError:
+		msg = "Sorry the file " + filename + " does not exist."
+		print(msg)
+	else:
+		words = contents.split()
+		num_words = len(words)
+		print("The file " + filename + " has about " + str(num_words) + " words.")
+
+filenames = ['alice.txt', 'siddhartha.txt', 'moby_dick.txt', 'little_women.txt']
+for filename in filenames:
+	count_words(filename)
+
+import json
+
+numbers = [2,3,5,7,11,13]
+
+filename = "numbers.json"
+with open(filename, 'w') as f_obj:
+	json.dump(numbers, f_obj)
+
+import json
+
+filename = "numbers.json"
+with open(filename) as f_obj:
+	numbers = json.load(f_obj)
+
+print(numbers)
+
+#combination
+import json
+
+def get_stored_username():
+	filename = "username.json"
+	try:
+		with open(filename) as f_obj:
+			username = json.load(f_obj)
+	except FileNotFoundError:
+		return None
+	else:
+		return username
+
+def get_new_username():
+	username = input('What is your name? ')
+	with open(filename, 'w') as f_obj:
+		json.dump(username, f_object)
+	return username
+
+def greet_user():
+	username = get_stored_username()
+	if username:
+		print("Welcom back " + username + "!")
+	else:
+		username = get_new_username()
+		print("We will remember you when you come back, " + username + "!")
+
+greet_user()
+
+from name_function import get_formatted_name
+print("Enter 'q' at any time to quit.")
+while True:
+	first = input("\nPlease give me a first name: ")
+	if first == 'q':
+		break
+	last = input("\nPleaase give me a last name: ")
+	if last == 'q':
+		break
+
+	formatted_name = get_formatted_name(first, last)
+	print("\tNeatly formatted name: " + formatted_name + ".")
+
+import unittest
+from name_function import get_formatted_name
+
+class NameTestCase(unittest.TestCase):
+	"""Test name_function.py"""
+
+	def test_first_last_name(self):
+		formatted_name = get_formatted_name('janis', 'joplin')
+		self.assertEqual(formatted_name, 'janis joplin')
+
+unittest.main()
+
+# Test class
+from survey import AnonymousSurvey
+
+question = "What language did you first learn to speak?"
+my_survey = AnonymousSurvey(question)
+
+my_survey.show_question()
+print("Enter 'q' at any time to quit.\n")
+while True:
+	response = input("Language: ")
+	if response == 'q':
+		break
+	my_survey.store_response(response)
+
+print("\nThank you to everyone who participate in this survey!")
+my_survey.show_results()
+
+import unitest
+from survey import AnonymousSurvey
+
+class TestAnonymousSurvey(unitest.TestCase):
+	"""Test AnonymousSurvey class"""
+	def test_store_single_response(self):
+		question = "What language did you first learn to speak?"
+		my_survey = AnonymousSurvey(question)
+		my_survey.store_response('Englis')
+
+		self.assertIn("English", my_survey.response)
+
+unitest.main()
